@@ -200,7 +200,7 @@ public abstract class NSObject {
     public static NSArray wrap(Object[] value) {
         NSArray arr = new NSArray(value.length);
         for (int i = 0; i < value.length; i++) {
-            arr.setValue(i, wrap(value[i]));
+            arr.add(wrap(value[i]));
         }
         return arr;
     }

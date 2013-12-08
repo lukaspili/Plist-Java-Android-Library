@@ -67,7 +67,7 @@ public class BinaryPropertyListWriter {
                     minVersion = v;
             }
         } else if (root instanceof NSArray) {
-            NSArray array = (NSArray) root;
+            NSArray<NSObject> array = (NSArray<NSObject>) root;
             for (NSObject o : array.getArray()) {
                 int v = getMinimumRequiredVersion(o);
                 if (v > minVersion)

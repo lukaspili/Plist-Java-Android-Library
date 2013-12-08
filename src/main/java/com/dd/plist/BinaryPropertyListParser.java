@@ -74,7 +74,7 @@ public class BinaryPropertyListParser {
      * Protected constructor so that instantiation is fully controlled by the
      * static parse methods.
      *
-     * @see main.java.com.dd.plist.BinaryPropertyListParser#parse(byte[])
+     * @see com.dd.plist.BinaryPropertyListParser#parse(byte[])
      */
     protected BinaryPropertyListParser() {
         /** empty **/
@@ -319,7 +319,7 @@ public class BinaryPropertyListParser {
                     int objRef = (int) parseUnsignedInt(copyOfRange(bytes,
                             offset + arrayoffset + i * objectRefSize,
                             offset + arrayoffset + (i + 1) * objectRefSize));
-                    array.setValue(i, parseObject(objRef));
+                    array.add(parseObject(objRef));
                 }
                 return array;
 

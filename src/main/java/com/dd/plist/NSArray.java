@@ -33,9 +33,9 @@ import java.util.List;
  *
  * @author Daniel Dreibrodt
  */
-public class NSArray extends NSObject {
+public class NSArray<T extends NSObject> extends NSObject {
 
-    private List<NSObject> array;
+    private List<T> array;
 
     /**
      * Creates an empty array of the given length.
@@ -43,7 +43,7 @@ public class NSArray extends NSObject {
      * @param length The number of elements this array will be able to hold.
      */
     public NSArray(int length) {
-        array = new ArrayList<NSObject>(length);
+        array = new ArrayList<T>(length);
     }
 
     /**
@@ -51,7 +51,7 @@ public class NSArray extends NSObject {
      *
      * @param a The array which should be wrapped by the NSArray
      */
-     public NSArray(List<NSObject> a) {
+     public NSArray(List<T> a) {
         array = a;
      }
 
@@ -87,8 +87,12 @@ public class NSArray extends NSObject {
      * @param key   The index where to store the object.
      * @param value The object.
      */
-    public void setValue(int key, NSObject value) {
+    public void setValue(int key, T value) {
         array.set(key, value);
+    }
+
+    public void add(T value) {
+        array.add(value);
     }
 
     /**
@@ -97,7 +101,7 @@ public class NSArray extends NSObject {
      *
      * @return The actual array represented by this NSArray.
      */
-    public List<NSObject> getArray() {
+    public List<T> getArray() {
         return array;
     }
 
