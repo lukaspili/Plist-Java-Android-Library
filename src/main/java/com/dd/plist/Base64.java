@@ -686,8 +686,8 @@ public class Base64 {
      * @param options            Specified options
      * @return The Base64-encoded object
      * @throws java.io.IOException if there is an error
-     * @see main.java.com.dd.plist.Base64#GZIP
-     * @see main.java.com.dd.plist.Base64#DO_BREAK_LINES
+     * @see com.dd.plist.Base64#GZIP
+     * @see com.dd.plist.Base64#DO_BREAK_LINES
      * @since 2.0
      */
     public static String encodeObject(java.io.Serializable serializableObject, int options)
@@ -802,8 +802,8 @@ public class Base64 {
      * @return The Base64-encoded data as a String
      * @throws java.io.IOException  if there is an error
      * @throws NullPointerException if source array is null
-     * @see main.java.com.dd.plist.Base64#GZIP
-     * @see main.java.com.dd.plist.Base64#DO_BREAK_LINES
+     * @see com.dd.plist.Base64#GZIP
+     * @see com.dd.plist.Base64#DO_BREAK_LINES
      * @since 2.0
      */
     public static String encodeBytes(byte[] source, int options) throws java.io.IOException {
@@ -870,8 +870,8 @@ public class Base64 {
      * @throws java.io.IOException      if there is an error
      * @throws NullPointerException     if source array is null
      * @throws IllegalArgumentException if source array, offset, or length are invalid
-     * @see main.java.com.dd.plist.Base64#GZIP
-     * @see main.java.com.dd.plist.Base64#DO_BREAK_LINES
+     * @see com.dd.plist.Base64#GZIP
+     * @see com.dd.plist.Base64#DO_BREAK_LINES
      * @since 2.0
      */
     public static String encodeBytes(byte[] source, int off, int len, int options) throws java.io.IOException {
@@ -922,8 +922,8 @@ public class Base64 {
      * @throws java.io.IOException      if there is an error
      * @throws NullPointerException     if source array is null
      * @throws IllegalArgumentException if source array, offset, or length are invalid
-     * @see main.java.com.dd.plist.Base64#GZIP
-     * @see main.java.com.dd.plist.Base64#DO_BREAK_LINES
+     * @see com.dd.plist.Base64#GZIP
+     * @see com.dd.plist.Base64#DO_BREAK_LINES
      * @since 2.3.1
      */
     public static byte[] encodeBytesToBytes(byte[] source, int off, int len, int options) throws java.io.IOException {
@@ -1695,11 +1695,11 @@ public class Base64 {
 
 
     /**
-     * A {@link main.java.com.dd.plist.Base64.InputStream} will read data from another
+     * A {@link com.dd.plist.Base64.InputStream} will read data from another
      * <tt>java.io.InputStream</tt>, given in the constructor,
      * and encode/decode to/from Base64 notation on the fly.
      *
-     * @see main.java.com.dd.plist.Base64
+     * @see com.dd.plist.Base64
      * @since 1.3
      */
     public static class InputStream extends java.io.FilterInputStream {
@@ -1716,7 +1716,7 @@ public class Base64 {
 
 
         /**
-         * Constructs a {@link main.java.com.dd.plist.Base64.InputStream} in DECODE mode.
+         * Constructs a {@link com.dd.plist.Base64.InputStream} in DECODE mode.
          *
          * @param in the <tt>java.io.InputStream</tt> from which to read data.
          * @since 1.3
@@ -1727,7 +1727,7 @@ public class Base64 {
 
 
         /**
-         * Constructs a {@link main.java.com.dd.plist.Base64.InputStream} in
+         * Constructs a {@link com.dd.plist.Base64.InputStream} in
          * either ENCODE or DECODE mode.
          * <p/>
          * Valid options:<pre>
@@ -1740,9 +1740,9 @@ public class Base64 {
          *
          * @param in      the <tt>java.io.InputStream</tt> from which to read data.
          * @param options Specified options
-         * @see main.java.com.dd.plist.Base64#ENCODE
-         * @see main.java.com.dd.plist.Base64#DECODE
-         * @see main.java.com.dd.plist.Base64#DO_BREAK_LINES
+         * @see com.dd.plist.Base64#ENCODE
+         * @see com.dd.plist.Base64#DECODE
+         * @see com.dd.plist.Base64#DO_BREAK_LINES
          * @since 2.0
          */
         public InputStream(java.io.InputStream in, int options) {
@@ -1906,11 +1906,11 @@ public class Base64 {
 
 
     /**
-     * A {@link main.java.com.dd.plist.Base64.OutputStream} will write data to another
+     * A {@link com.dd.plist.Base64.OutputStream} will write data to another
      * <tt>java.io.OutputStream</tt>, given in the constructor,
      * and encode/decode to/from Base64 notation on the fly.
      *
-     * @see main.java.com.dd.plist.Base64
+     * @see com.dd.plist.Base64
      * @since 1.3
      */
     public static class OutputStream extends java.io.FilterOutputStream {
@@ -1927,7 +1927,7 @@ public class Base64 {
         private byte[] decodabet;  // Local copies to avoid extra method calls
 
         /**
-         * Constructs a {@link main.java.com.dd.plist.Base64.OutputStream} in ENCODE mode.
+         * Constructs a {@link com.dd.plist.Base64.OutputStream} in ENCODE mode.
          *
          * @param out the <tt>java.io.OutputStream</tt> to which data will be written.
          * @since 1.3
@@ -1938,7 +1938,7 @@ public class Base64 {
 
 
         /**
-         * Constructs a {@link main.java.com.dd.plist.Base64.OutputStream} in
+         * Constructs a {@link com.dd.plist.Base64.OutputStream} in
          * either ENCODE or DECODE mode.
          * <p/>
          * Valid options:<pre>
@@ -1951,9 +1951,9 @@ public class Base64 {
          *
          * @param out     the <tt>java.io.OutputStream</tt> to which data will be written.
          * @param options Specified options.
-         * @see main.java.com.dd.plist.Base64#ENCODE
-         * @see main.java.com.dd.plist.Base64#DECODE
-         * @see main.java.com.dd.plist.Base64#DO_BREAK_LINES
+         * @see com.dd.plist.Base64#ENCODE
+         * @see com.dd.plist.Base64#DECODE
+         * @see com.dd.plist.Base64#DO_BREAK_LINES
          * @since 1.3
          */
         public OutputStream(java.io.OutputStream out, int options) {
