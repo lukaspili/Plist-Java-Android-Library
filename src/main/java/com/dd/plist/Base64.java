@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package main.java.com.dd.plist;
+package com.dd.plist;
 
 /**
  * <p>Encodes and decodes to and from Base64 notation.</p>

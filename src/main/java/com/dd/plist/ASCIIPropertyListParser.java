@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package main.java.com.dd.plist;
+package com.dd.plist;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -409,7 +409,7 @@ public class ASCIIPropertyListParser {
         }
         //parse end token
         read(ARRAY_END_TOKEN);
-        return new NSArray(objects.toArray(new NSObject[objects.size()]));
+        return new NSArray(objects);
     }
 
     /**

@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package main.java.com.dd.plist;
+package com.dd.plist;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -345,10 +345,10 @@ public abstract class NSObject {
      */
     public Object toJavaObject() {
         if(this instanceof NSArray) {
-            NSObject[] arrayA = ((NSArray)this).getArray();
-            Object[] arrayB = new Object[arrayA.length];
-            for(int i = 0; i < arrayA.length; i++) {
-                arrayB[i] = arrayA[i].toJavaObject();
+            List<NSObject> arrayA = ((NSArray)this).getArray();
+            Object[] arrayB = new Object[arrayA.size()];
+            for(int i = 0; i < arrayA.size(); i++) {
+                arrayB[i] = arrayA.get(i).toJavaObject();
             }
             return arrayB;
         } else if (this instanceof NSDictionary) {

@@ -21,7 +21,7 @@
  * SOFTWARE.
  */
 
-package main.java.com.dd.plist;
+package com.dd.plist;
 
 import java.io.IOException;
 import java.util.Arrays;
